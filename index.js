@@ -57,7 +57,7 @@ client.on('message', message => {
 	} catch (error) {
 		console.error(error);
 		var response = "there was an error trying to execute that command!"
-		message.reply(response.toUpperCase);
+		message.reply(response);
 	}
 });
 
