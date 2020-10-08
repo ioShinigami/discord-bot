@@ -7,16 +7,16 @@ module.exports = {
         var fs = require('fs');
         var data = {
             idea: args,
-           
-          }
-      
-      var jsonData = JSON.stringify(data);      
-      console.log("execute -> jsonData", jsonData)
-        fs.appendFile('project.json', jsonData, function(err) {
+
+        }
+
+        var jsonData = JSON.stringify(data);
+        console.log("execute -> jsonData", jsonData)
+        fs.appendFile('project.json', jsonData, function (err) {
             if (err) {
                 console.log(err);
             }
         })
-       
+
     },
 };

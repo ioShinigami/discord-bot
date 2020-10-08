@@ -6,10 +6,10 @@ const client = new tmi.Client({
         reconnect: true
       },
       
-      channels: ["lord_kebun"]
+      channels: ["cmgriffing"]
     });
 module.exports = {
-	name: 'start-twitch-chat',
+	name: 'stc',
     description: 'Starts a relay chat for twitch.',
     twitchmessage: null,
 	execute(message) {
