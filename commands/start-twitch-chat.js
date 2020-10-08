@@ -16,8 +16,6 @@ module.exports = {
         var newMessage = message;
         client.connect();
         client.on('message', (channel, tags, message) => {
-            //console.log(tags)
-            //console.log(`${tags['badge-info']}`)
             setTimeout(() => {                
                 const embed = new Discord.MessageEmbed()
                     .setColor('#0099ff')
@@ -26,11 +24,7 @@ module.exports = {
                     .setTimestamp()
                     .setFooter(`${tags['badge-info-raw']}`)
                 newMessage.channel.send(embed);
-            }, 1000);
-            
-         
-            
-            //console.log("execute -> twitchmessage", this.twitchmessage)
+            }, 5000);
         })
   
 	},

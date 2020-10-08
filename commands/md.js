@@ -1,7 +1,8 @@
 module.exports = {
-	name: 'massdelete',
+	name: 'md',
 	description: 'Mass Delete up to 99 messages.',
 	execute(message, args) {
+
 		const amount = parseInt(args[0]) + 1;
 
 		if (isNaN(amount)) {
