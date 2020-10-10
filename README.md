@@ -56,7 +56,7 @@ The entire bot is written in Javascript and is very framework heavy.
 To use the bot, type:
 
 ```
->npm index.js 
+>node index.js 
 ```
 
 ### Example:
