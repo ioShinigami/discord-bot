@@ -18,9 +18,9 @@ module.exports = {
         client.on('message', (channel, tags, message) => {
             setTimeout(() => {                
                 const embed = new Discord.MessageEmbed()
-                    .setColor('#0099ff')
+                    .setColor('#6441a5')
                     .setTitle(`${tags['display-name']}`)
-                    .setDescription(`${message}`)
+                    .setDescription(`> ${message}`)
                     .setTimestamp()
                     .setFooter(`${tags['badge-info-raw']}`)
                 newMessage.channel.send(embed);
