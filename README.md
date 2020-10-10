@@ -9,8 +9,8 @@
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![Platform](https://img.shields.io/badge/node-%3E%3D%206.0.0-brightgreen)]()
-[![GitHub Issues](https://img.shields.io/github/issues/ioShinigami/discordBot.svg)](https://github.com/ioShinigami/discordBot/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/ioShinigami/discordBot.svg)](https://github.com/ioShinigami/discordBot/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/ioShinigami/discord-bot.svg)](https://github.com/ioShinigami/discord-bot/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/ioShinigami/discord-bot.svg)](https://github.com/ioShinigami/discord-bot/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
