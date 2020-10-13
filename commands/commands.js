@@ -14,6 +14,11 @@ module.exports = {
         ' project',
         ' send-twitch-message',
         ' stc : start-twitch-chat',
+        'get-js-news',
+        'hnsfw',
+        'rnsfw',
+        'music-commands',
+        'oceanman',
         ' ticket',
         ' user-info'
     ],
