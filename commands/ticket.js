@@ -3,6 +3,7 @@ module.exports = {
     name: 'ticket',
     description: 'Creates a Ticket Channel for User.',
     execute(message) {
+        if (message.channel.id === ticketChannelid) {
         var owner = message.guild.ownerID
         console.log("execute -> owner", owner)
         const name = message.author.username
@@ -29,6 +30,9 @@ module.exports = {
                   r.permissionOverwrites(everyoneRole, { VIEW_CHANNEL: false }); */
             })
             .catch(console.error);
+        } else {
+            message.reply('This is not the correct channel for commands , please use #support-ticket')
+        }
     },
 };
 
