@@ -15,7 +15,6 @@ module.exports = {
     ],
     execute(message) {
         if (message.channel.id === discordguildid) {
-
             //TODO permission system , send variable content based on the person requestings permission level
 
             const embed = new Discord.MessageEmbed()
@@ -33,7 +32,7 @@ module.exports = {
                 )
                 .setTimestamp()
                 .setFooter('This is an automated response', 'https://i.imgur.com/wSTFkRM.png');
-            message.channel.send(embed);
+                message.author.send(embed)
         } else {
             message.reply('This is not the correct channel for commands , please use #bot-commands')
         }
