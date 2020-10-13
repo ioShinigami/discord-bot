@@ -1,3 +1,4 @@
+const discordChannelId = "763793192453275659";
 const Discord = require('discord.js');
 module.exports = {
     name: 'commands',
@@ -17,7 +18,7 @@ module.exports = {
         ' user-info'
     ],
     execute(message) {
-
+        if (message.channel.id === discordChannelId) {
 
         //TODO permission system , send variable content based on the person requestings permission level
 
@@ -32,6 +33,10 @@ module.exports = {
             .setThumbnail("https://cdn.discordapp.com/avatars/449250687868469258/1709ab4f567c56eaa731518ff621747c.png?size=2048")
             .setTimestamp()
             .setFooter('This is an automated response', 'https://i.imgur.com/wSTFkRM.png');
-        message.channel.send(embed);
+            message.author.send(embed)
+            } else {
+                message.reply('This is not the correct channel for commands , please use #botcommands')
+  
+            }
     },
 };
