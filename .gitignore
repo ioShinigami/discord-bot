@@ -107,6 +107,4 @@ dist
 config.json
 save.txt
 commands/custom-nsfw.js
-commands/hnsfw.js
-commands/rnsfw.js
-commands/save.js
+
