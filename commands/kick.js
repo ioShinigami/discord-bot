@@ -35,7 +35,7 @@ module.exports = {
             const discordChannel =  '766021428306116659';
             const whoKicked = message.author.username
             console.log("execute -> whoKicked", whoKicked)
-            console.log("execute -> 1", client)
+            console.log(client.channels.cache.get('766021428306116659'))
             
             
            // client.channels.cache.get(discordChannel).send(whoKicked + " " + mentionMember)
