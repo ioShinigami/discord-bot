@@ -33,9 +33,20 @@ module.exports = {
         message.channel.send('kicked')  
         .then(() => {
                 const channel = messageUpdate.guild.channels.cache.find(ch => ch.name === 'admin-logs');
-                
                 const whoKicked = message.author.username
-                channel.send();
+                const embed = new Discord.MessageEmbed()
+                .setColor('#F18C8E')
+                .setTitle(`${message.guild.name}`)
+                .setDescription('***USER KICKED***')
+                .addFields(
+                    { name: "AUTHOR", value: whoKicked, inline: true },
+                    { name: "USER KICKED", value: mentionMember, inline: true },
+                )
+                .setImage("https://cdn.discordapp.com/avatars/449250687868469258/1709ab4f567c56eaa731518ff621747c.png?size=2048")
+                .setThumbnail("https://cdn.discordapp.com/avatars/449250687868469258/1709ab4f567c56eaa731518ff621747c.png?size=2048")
+                .setTimestamp()
+                .setFooter('This is an automated response', 'https://i.imgur.com/wSTFkRM.png');
+                channel.send(embed);
             }).catch(console.error);
             
             
