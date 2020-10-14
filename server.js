@@ -47,9 +47,10 @@ client.on('guildMemberAdd', member => {
   client.on("messageDelete", (messageDelete) => {
 	
 	  const channel = messageDelete.guild.channels.cache.find(ch => ch.name === 'admin-logs');
+	 const author = messageDelete.author
 	  const embedAdmin = new Discord.MessageEmbed()
                 .setColor('#F1D1B5')
-                .setTitle(`${messageDelete.author}`)
+                .setTitle(author)
                 .setURL('https://github.com/ioshinigami')
                 .setDescription(`${messageDelete.author.id}`)
                 .addFields(
@@ -59,7 +60,7 @@ client.on('guildMemberAdd', member => {
                 .setThumbnail("https://cdn.discordapp.com/avatars/449250687868469258/1709ab4f567c56eaa731518ff621747c.png?size=2048")
                 .setTimestamp()
                 .setFooter('This is an automated response', 'https://i.imgur.com/wSTFkRM.png');
-	  			channel.send(embedAdmin);
+	  channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author} was deleted. Their ID is ${messageDelete.author.id}`);
   }); 
 
 client.on('message', message => {
