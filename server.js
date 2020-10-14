@@ -16,7 +16,7 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', () => {
-	console.log('CONNECTION STARTED!');
+	console.log('CONNECTION ESTABLISHED!');
 	client.user.setActivity(`with Anime Tiddies`);
 });
 
@@ -46,8 +46,13 @@ client.on('guildMemberAdd', member => {
 
   client.on("messageDelete", (messageDelete) => {	
 	  const channel = messageDelete.guild.channels.cache.find(ch => ch.name === 'admin-logs');
-	  channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author} was deleted. Their ID is ${messageDelete.author.id}`);
+	  channel.send(` > **MESSAGE** : \n  \n [ "${messageDelete.content}" ] \n  > **AUTHOR** :  ${messageDelete.author} deleted the message.  \n > **ID** : [${messageDelete.author.id}]`);
   }); 
+  client.on("messageUpdate", (messageUpdate) => {	
+	const channel = messageUpdate.guild.channels.cache.find(ch => ch.name === 'admin-logs');
+	console.log(messageUpdate.reactions.message.content)
+	channel.send(` > **OLD MESSAGE** : \n  \n [ "${messageUpdate.content}" ] \n > **NEW MESSAGE** : \n  \n [ "${messageUpdate.reactions.message.content}" ] \n  > **AUTHOR** :  ${messageUpdate.author} edited the message.  \n > **ID** : [${messageUpdate.author.id}]`);
+}); 
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
