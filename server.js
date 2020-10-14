@@ -44,6 +44,11 @@ client.on('guildMemberAdd', member => {
 	//channel.send();
   });
 
+  client.on("messageDelete", (messageDelete) => {
+	const channel = messageDelete.guild.channels.find(ch => ch.name === 'admin-logs');
+	channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author} was deleted. Their ID is ${messageDelete.author.id}`);
+  }); 
+
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
