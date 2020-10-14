@@ -10,10 +10,8 @@ module.exports = {
 		if (message.channel.id === discordChannelId) {
 			message.channel.send(phrase);
 		} else {
-			message.reply('This is not the correct channel for commands , please use #meme')
-			setTimeout(() => {
-				message.delete();
-			}, 10000);
+			message.send('This is not the correct channel for commands , please use #meme')
+			
 		}
 	},
 };
