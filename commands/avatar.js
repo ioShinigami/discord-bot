@@ -4,6 +4,7 @@ module.exports = {
 	name: 'avatar',
 	description: 'Get the avatar URL of the tagged user(s), or your own avatar.',
 	execute(message) {
+		message.delete();
 		if (message.channel.id === discordChannelId) {
 			var avatarURL = message.author.displayAvatarURL()
 			message.author.send(avatarURL)

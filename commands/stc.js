@@ -13,6 +13,7 @@ module.exports = {
     description: 'Starts a relay chat for twitch.',
     twitchmessage: null,
     execute(message) {
+        message.delete();
         if (message.member.hasPermission('ADMINISTRATOR')) {
             var newMessage = message;
             client.connect();

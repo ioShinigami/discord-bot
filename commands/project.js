@@ -3,6 +3,7 @@ module.exports = {
     description: 'Creates a project log.',
     args: true,
     execute(message, args) {
+        message.delete();
         if (message.member.hasPermission('ADMINISTRATOR')) {
             console.log("execute -> message", message)
             var fs = require('fs');

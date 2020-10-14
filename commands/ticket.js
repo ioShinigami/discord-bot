@@ -3,6 +3,7 @@ module.exports = {
     name: 'ticket',
     description: 'Creates a Ticket Channel for User.',
     execute(message) {
+        message.delete();
         if (message.channel.id === ticketChannelid) {
             var owner = message.guild.ownerID
             console.log("execute -> owner", owner)

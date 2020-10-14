@@ -5,6 +5,7 @@ module.exports = {
 	url: 'https://github.com/ioShinigami',
 	args: true,
 	execute(message) {
+		message.delete();
 		if (message.channel.id === discordChannelId) {
 			message.author.send(`GITHUB : ${this.url}`)
 		} else {

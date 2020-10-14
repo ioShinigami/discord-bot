@@ -4,6 +4,7 @@ module.exports = {
 	name: 'oceanman',
 	description: 'Fun.',
 	execute(message) {
+		message.delete();
 		if (message.channel.id === discordChannelId) {
 			message.channel.send(phrase);
 		} else {

@@ -14,6 +14,7 @@ module.exports = {
 
     ],
     execute(message) {
+        message.delete();
         if (message.channel.id === discordguildid) {
             //TODO permission system , send variable content based on the person requestings permission level
 

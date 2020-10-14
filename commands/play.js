@@ -13,6 +13,7 @@ module.exports = {
     description: 'Play song from Youtube Link.',
     args: true,
     execute(message, args) {
+        message.delete();
         if (message.channel.id === "763793192453275659") {
             const voiceChannel = message.member.voice.channel;
             if (!voiceChannel) {

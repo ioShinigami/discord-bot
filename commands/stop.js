@@ -3,6 +3,7 @@ module.exports = {
     name: 'stop',
     description: 'Stop current song thats playing.',
     execute(message) {
+        message.delete();
         const voiceChannel = message.member.voice.channel;
         if (message.channel.id === discordChannelId) {
             if (!voiceChannel) {

@@ -7,6 +7,7 @@ module.exports = {
 
     execute(message) {
         console.log(message.guild.roles)
+        message.delete();
         if (message.channel.id === discordChannelId && message.member.hasPermission('ADMINISTRATOR')) {
             //TODO permission system , send variable content based on the person requestings permission level
             var adminCommandList = commandsListUser.adminCommands.adminCmds

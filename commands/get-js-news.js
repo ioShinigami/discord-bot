@@ -12,6 +12,7 @@ module.exports = {
     name: 'get-js-news',
     description: 'Display latest javascript news',
     execute(message) {
+        message.delete();
         if (message.channel.id === discordChannelId && message.member.hasPermission('ADMINISTRATOR')) {
             axios.get(url)
                 .then(response => {

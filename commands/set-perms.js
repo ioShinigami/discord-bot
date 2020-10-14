@@ -3,6 +3,7 @@ module.exports = {
 	name: 'user-info',
 	description: 'Display info about yourself.',
 	execute(message) {
+		message.delete();
 		if (message.channel.id === discordChannelId) {
 			message.author.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`)
 		} else {

@@ -16,6 +16,7 @@ module.exports = {
   description: 'Sends Message in twitch channel.',
   args: true,
   execute(message, args) {
+    message.delete();
     if (message.member.hasPermission('ADMINISTRATOR')) {
       console.log(args[0], args[1])
 
