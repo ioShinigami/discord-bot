@@ -3,6 +3,7 @@ module.exports = {
     description: 'Creates a project log.',
     args: true,
     execute(message, args) {
+        if (message.member.hasPermission('ADMINISTRATOR')) {
         console.log("execute -> message", message)
         var fs = require('fs');
         var data = {
@@ -17,6 +18,6 @@ module.exports = {
                 console.log(err);
             }
         })
-
+        }
     },
 };

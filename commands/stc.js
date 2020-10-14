@@ -13,6 +13,7 @@ module.exports = {
     description: 'Starts a relay chat for twitch.',
     twitchmessage: null,
 	execute(message) {
+        if (message.member.hasPermission('ADMINISTRATOR')) {
         var newMessage = message;
         client.connect();
         client.on('message', (channel, tags, message) => {
@@ -26,6 +27,6 @@ module.exports = {
                 newMessage.channel.send(embed);
             }, 5000);
         })
-  
+    }
 	},
 };
