@@ -28,7 +28,7 @@ module.exports = {
          };
  
          //If all steps are completed successfully try kick this user
-         mentionMember.kick()
+         mentionMember.reply('Kicked')
              .then(() => {
 
             const discordChannel =  '766021428306116659';
