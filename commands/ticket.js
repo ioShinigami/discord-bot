@@ -32,7 +32,7 @@ module.exports = {
                 })
                 .catch(console.error);
         } else {
-            message.reply('This is not the correct channel for commands , please use #support-ticket')
+            message.author.send('This is not the correct channel for commands , please use #support-ticket')
         }
     },
 };

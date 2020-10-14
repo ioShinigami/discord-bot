@@ -9,7 +9,7 @@ module.exports = {
 			var avatarURL = message.author.displayAvatarURL()
 			message.author.send(avatarURL)
 		} else {
-			message.reply('This is not the correct channel for commands , please use #botcommands')
+			message.author.send('This is not the correct channel for commands , please use #botcommands')
 		}
 	},
 };

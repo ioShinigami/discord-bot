@@ -48,7 +48,7 @@ module.exports = {
                         .catch(error => console.log(error))
                 })
         } else {
-            message.reply('This is not the correct channel for commands , please use #javascript-news or you arent an Administrator')
+            message.author.send('This is not the correct channel for commands , please use #javascript-news or you arent an Administrator')
         }
 
     },

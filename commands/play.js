@@ -17,7 +17,7 @@ module.exports = {
         if (message.channel.id === "763793192453275659") {
             const voiceChannel = message.member.voice.channel;
             if (!voiceChannel) {
-                return message.reply("Please join a voice channel first!");
+                return message.author.send("Please join a voice channel first!");
             }
             switch (args[0]) {
                 case "track1":
@@ -49,7 +49,7 @@ module.exports = {
                 dispatcher.on('finish', () => voiceChannel.leave());
             });
         } else {
-            message.reply('This is not the correct channel for commands , please use #botcommands')
+            message.author.send('This is not the correct channel for commands , please use #botcommands')
         }
     },
 };

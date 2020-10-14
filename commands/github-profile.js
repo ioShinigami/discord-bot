@@ -9,7 +9,7 @@ module.exports = {
 		if (message.channel.id === discordChannelId) {
 			message.author.send(`GITHUB : ${this.url}`)
 		} else {
-			message.reply('This is not the correct channel for commands , please use #botcommands')
+			message.author.send('This is not the correct channel for commands , please use #botcommands')
 		}
 	},
 };
