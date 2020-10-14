@@ -29,18 +29,18 @@ module.exports = {
  
          //If all steps are completed successfully try kick this user
         // mentionMember.reply('Kicked')
+        // mentionMember.kick()
         message.channel.send('kicked')  
         .then(() => {
-
-            const discordChannel =  '766021428306116659';
-            const whoKicked = message.author.username
-            console.log("execute -> whoKicked", whoKicked)
-            console.log(client.channels.cache.get('766021428306116659'))
+                const channel = messageUpdate.guild.channels.cache.find(ch => ch.name === 'admin-logs');
+                
+                const whoKicked = message.author.username
+                channel.send();
+            }).catch(console.error);
             
             
            // client.channels.cache.get(discordChannel).send(whoKicked + " " + mentionMember)
 
-             })
-             .catch(console.error);
+             
 	},
 };
