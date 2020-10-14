@@ -60,7 +60,7 @@ client.on('guildMemberAdd', member => {
                 .setTimestamp()
                 .setFooter('This is an automated response', 'https://i.imgur.com/wSTFkRM.png');
 				channel.send(embedAdmin)
-				channel.send(`${messageDelete.author} was deleted. Their ID is ${messageDelete.author.id}`);
+				channel.send(`${messageDelete.author} deleted a message. Their ID is ${messageDelete.author.id}`);
   }); 
 
 client.on('message', message => {
