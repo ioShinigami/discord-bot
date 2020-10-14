@@ -21,7 +21,7 @@ module.exports = {
                 .setColor('#0099ff')
                 .setTitle(`${message.guild.name}`)
                 .setURL('https://github.com/ioshinigami')
-                .setDescription('MUSIC COMMANDS')
+                .setDescription('***MUSIC COMMANDS***')
                 .addFields(
                     {name: "track1", value: this.commandsListUser[0], inline: true},
                     {name: "track2", value: this.commandsListUser[1], inline: true},
