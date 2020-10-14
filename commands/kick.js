@@ -29,10 +29,11 @@ module.exports = {
 
         //If all steps are completed successfully try kick this user
         // mentionMember.reply('Kicked')
+        message.delete();
         mentionMember.kick()
             .then(() => {
                 const channel = message.guild.channels.cache.find(ch => ch.name === 'admin-logs');
-                const whoKicked = message.author.username
+                const whoKicked = message.author
                 let reasonLength = args.length
                 if (reasonLength !== 1) {
                     let reason = args.slice(1);

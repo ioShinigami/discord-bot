@@ -28,31 +28,31 @@ client.on('guildMemberAdd', member => {
 		'Welcome to the party, ' + user,
 		'CHANG GANG!!! ' + user
 	]
-  var t = randomMessageGenerator()
-  const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
-  const embed = new Discord.MessageEmbed()
-  .setColor('#0099ff')
-  .setTitle('WELCOME')
-  .setDescription(welcomeMessageArray[t])
-  .setTimestamp()
-  .setFooter('Enjoy your stay');
-  channel.send(embed)
- // member.guild.channels.find(c => c.name === "welcome").send(welcomeMessageArray[t]);
+	var t = randomMessageGenerator()
+	const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
+	const embed = new Discord.MessageEmbed()
+		.setColor('#0099ff')
+		.setTitle('WELCOME')
+		.setDescription(welcomeMessageArray[t])
+		.setTimestamp()
+		.setFooter('Enjoy your stay');
+	channel.send(embed)
+	// member.guild.channels.find(c => c.name === "welcome").send(welcomeMessageArray[t]);
 
 	// Send the message, mentioning the member
 
 	//channel.send();
-  });
+});
 
-  client.on("messageDelete", (messageDelete) => {	
-	  const channel = messageDelete.guild.channels.cache.find(ch => ch.name === 'admin-logs');
-	  channel.send(` > **MESSAGE** : \n  \n [ "${messageDelete.content}" ] \n  > **AUTHOR** :  ${messageDelete.author} deleted the message.  \n > **ID** : [${messageDelete.author.id}]`);
-  }); 
-  client.on("messageUpdate", (messageUpdate) => {	
-	const channel = messageUpdate.guild.channels.cache.find(ch => ch.name === 'admin-logs');
-	console.log(messageUpdate.reactions.message.content)
-	channel.send(` > **OLD MESSAGE** : \n  \n [ "${messageUpdate.content}" ] \n > **NEW MESSAGE** : \n  \n [ "${messageUpdate.reactions.message.content}" ] \n  > **AUTHOR** :  ${messageUpdate.author} edited the message.  \n > **ID** : [${messageUpdate.author.id}]`);
-}); 
+client.on("messageDelete", (messageDelete) => {
+	const channel = messageDelete.guild.channels.cache.find(ch => ch.name === 'admin-logs');
+	channel.send(` > **MESSAGE** : \n  \n [ "${messageDelete.content}" ] \n  > **AUTHOR** :  ${messageDelete.author} deleted the message.  \n > **ID** : [${messageDelete.author.id}]`);
+});
+//   client.on("messageUpdate", (messageUpdate) => {	
+// 	const channel = messageUpdate.guild.channels.cache.find(ch => ch.name === 'admin-logs');
+// 	console.log(messageUpdate.reactions.message.content)
+// 	channel.send(` > **OLD MESSAGE** : \n  \n [ "${messageUpdate.content}" ] \n > **NEW MESSAGE** : \n  \n [ "${messageUpdate.reactions.message.content}" ] \n  > **AUTHOR** :  ${messageUpdate.author} edited the message.  \n > **ID** : [${messageUpdate.author.id}]`);
+// }); 
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -75,9 +75,9 @@ client.login(token);
 
 
 function randomMessageGenerator() {
-		var max = Math.floor(4)
-		var min = Math.ceil(1)
-		var newRandomMath = Math.floor(Math.random() * (max - min) + min);
+	var max = Math.floor(4)
+	var min = Math.ceil(1)
+	var newRandomMath = Math.floor(Math.random() * (max - min) + min);
 	return newRandomMath
-	
+
 }
