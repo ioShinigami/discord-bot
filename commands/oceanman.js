@@ -10,7 +10,7 @@ module.exports = {
 		if (message.channel.id === discordChannelId) {
 			message.channel.send(phrase);
 		} else {
-			message.send('This is not the correct channel for commands , please use #meme')
+			message.author.send('This is not the correct channel for commands , please use #meme')
 			
 		}
 	},

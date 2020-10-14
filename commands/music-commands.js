@@ -35,7 +35,7 @@ module.exports = {
                 .setFooter('This is an automated response', 'https://i.imgur.com/wSTFkRM.png');
             message.author.send(embed)
         } else {
-            message.send('This is not the correct channel for commands , please use #bot-commands')
+            message.author.send('This is not the correct channel for commands , please use #bot-commands')
         }
     },
 };
