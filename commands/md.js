@@ -2,7 +2,7 @@ module.exports = {
 	name: 'md',
 	description: 'Mass Delete up to 99 messages.',
 	execute(message, args) {
-
+if (message.member.hasPermission('ADMINISTRATOR')) {
 		const amount = parseInt(args[0]) + 1;
 
 		if (isNaN(amount)) {
@@ -15,5 +15,6 @@ module.exports = {
 			console.error(err);
 			message.channel.send('there was an error trying to mass delete messages in this channel!');
 		});
+		}
 	},
 };

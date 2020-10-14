@@ -12,7 +12,7 @@ module.exports = {
     name: 'get-js-news',
     description: 'Display latest javascript news',
     execute(message) {
-        if (message.channel.id === discordChannelId) {
+        if (message.channel.id === discordChannelId && message.member.hasPermission('ADMINISTRATOR')) {
             axios.get(url)
                 .then(response => {
 
@@ -47,7 +47,7 @@ module.exports = {
                         .catch(error => console.log(error))
                 })
         } else {
-            message.reply('This is not the correct channel for commands , please use #javascript-news')
+            message.reply('This is not the correct channel for commands , please use #javascript-news or you arent an Administrator')
         }
 
     },
