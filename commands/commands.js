@@ -1,35 +1,13 @@
 const discordChannelId = "763793192453275659";
 const Discord = require('discord.js');
+let commandsListUser = require('../commands/utils/commandsList');
 module.exports = {
     name: 'commands',
     description: 'Display info about server commands.',
-    commandsListUser: [
-      { userCommands : [  '> !avatar',
-        '> !commands',
-        '> !github-profile',
-        '> !get-meme',
-        '> !play',
-        '> !stop',
-        '> !get-js-news',
-        '> !hnsfw',
-        '> !rnsfw',
-        '> !music-commands',
-        '> !oceanman',
-        '> !ticket',
-        '> !user-info'] },
-        {
-            adminCommands : [ 
-                '> !massdelete',
-                '> !project',
-                '> !send-twitch-message',
-                '> !stc : start-twitch-chat',
-                
-            ]
-        }
-    ],
+
     execute(message) {
         if (message.channel.id === discordChannelId) {
-
+            console.log(commandsListUser.userCommands)
         //TODO permission system , send variable content based on the person requestings permission level
 
         const embed = new Discord.MessageEmbed()
