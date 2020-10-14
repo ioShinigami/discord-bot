@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
 module.exports = {
 	name: 'kick',
 	description: 'Kicks user from server.',
@@ -27,7 +29,13 @@ module.exports = {
  
          //If all steps are completed successfully try kick this user
          mentionMember.kick()
-             .then(() => console.log(`Kicked ` +  mentionMember))
+             .then(() => {
+
+            const discordChannel =  '766021428306116659';
+            const whoKicked = message.author
+            client.channels.cache.get(discordChannel).send(whoKicked + " " + mentionMember)
+
+             })
              .catch(console.error);
 	},
 };
