@@ -23,16 +23,16 @@ module.exports = {
                 .setURL('https://github.com/ioshinigami')
                 .setDescription('***MUSIC COMMANDS***')
                 .addFields(
-                    {name: "track1", value: this.commandsListUser[0], inline: true},
-                    {name: "track2", value: this.commandsListUser[1], inline: true},
-                    {name: "track3", value: this.commandsListUser[2], inline: true},
-                    {name: "track4", value: this.commandsListUser[3], inline: true},
-                    {name: "track5", value: this.commandsListUser[4], inline: true},
-                    {name: "track6", value: this.commandsListUser[5], inline: true},
+                    { name: "track1", value: this.commandsListUser[0], inline: true },
+                    { name: "track2", value: this.commandsListUser[1], inline: true },
+                    { name: "track3", value: this.commandsListUser[2], inline: true },
+                    { name: "track4", value: this.commandsListUser[3], inline: true },
+                    { name: "track5", value: this.commandsListUser[4], inline: true },
+                    { name: "track6", value: this.commandsListUser[5], inline: true },
                 )
                 .setTimestamp()
                 .setFooter('This is an automated response', 'https://i.imgur.com/wSTFkRM.png');
-                message.author.send(embed)
+            message.author.send(embed)
         } else {
             message.reply('This is not the correct channel for commands , please use #bot-commands')
         }

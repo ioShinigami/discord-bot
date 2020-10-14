@@ -15,9 +15,9 @@
 // 					console.log(fetched); // logs the image;
 // 					let advanced = await api.advanced("meme", true);
 // 				console.log(advanced); // { img: *img*, res: *response time*, };
-			
+
 // 					message.reply(advanced.img)					
-		
+
 // 			})();
 // 			}
 // 		} else {

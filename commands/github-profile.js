@@ -6,7 +6,7 @@ module.exports = {
 	args: true,
 	execute(message) {
 		if (message.channel.id === discordChannelId) {
-		message.author.send(`GITHUB : ${this.url}`)
+			message.author.send(`GITHUB : ${this.url}`)
 		} else {
 			message.reply('This is not the correct channel for commands , please use #botcommands')
 		}

@@ -34,9 +34,9 @@ module.exports = {
                 case "track5":
                     args[0] = presets[4]
                     break;
-                    case "track6":
-                        args[0] = presets[5]
-                        break;
+                case "track6":
+                    args[0] = presets[5]
+                    break;
                 default:
                     args[0] = args[0]
                     break;

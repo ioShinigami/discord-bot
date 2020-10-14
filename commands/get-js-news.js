@@ -43,7 +43,7 @@ module.exports = {
                         .setImage(articleImg[newRndData])
                         .setTimestamp()
                         .setFooter("Requested by : " + `${message.author.username}`)
-                        message.channel.send(embed)
+                    message.channel.send(embed)
                         .catch(error => console.log(error))
                 })
         } else {

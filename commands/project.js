@@ -4,20 +4,20 @@ module.exports = {
     args: true,
     execute(message, args) {
         if (message.member.hasPermission('ADMINISTRATOR')) {
-        console.log("execute -> message", message)
-        var fs = require('fs');
-        var data = {
-            idea: args,
+            console.log("execute -> message", message)
+            var fs = require('fs');
+            var data = {
+                idea: args,
 
-        }
-
-        var jsonData = JSON.stringify(data);
-        console.log("execute -> jsonData", jsonData)
-        fs.appendFile('project.json', jsonData, function (err) {
-            if (err) {
-                console.log(err);
             }
-        })
+
+            var jsonData = JSON.stringify(data);
+            console.log("execute -> jsonData", jsonData)
+            fs.appendFile('project.json', jsonData, function (err) {
+                if (err) {
+                    console.log(err);
+                }
+            })
         }
     },
 };

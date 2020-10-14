@@ -17,11 +17,11 @@ module.exports = {
   args: true,
   execute(message, args) {
     if (message.member.hasPermission('ADMINISTRATOR')) {
-    console.log(args[0], args[1])
+      console.log(args[0], args[1])
 
-    twitchclient.connect();
-    /// FIXME this doesnt work , unsure why
-    twitchclient.say("thiswaifu", 'Username' + args[0] + ' ' + args[1])
+      twitchclient.connect();
+      /// FIXME this doesnt work , unsure why
+      twitchclient.say("thiswaifu", 'Username' + args[0] + ' ' + args[1])
     }
   },
 };
