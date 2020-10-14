@@ -7,7 +7,8 @@ module.exports = {
 
     execute(message) {
         if (message.channel.id === discordChannelId) {
-            console.log(commandsListUser.userCommands.commands)
+            console.log(commandsListUser)
+
         //TODO permission system , send variable content based on the person requestings permission level
 
         // const embed = new Discord.MessageEmbed()
